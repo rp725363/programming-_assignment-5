@@ -1,0 +1,89 @@
+Write a Python Program to Find LCM?
+Ans:-
+Here we written function to get LCM of given num1 num2 in below function.
+def find_gcd(a,b):
+    while b !=0:
+        a,b=b,a%b
+    return a
+def find_lcm(a,b):
+    gcd=find_gcd(a,b)
+    lcm=(a*b)//gcd
+    return lcm
+
+num1=int(input("enter your a"))
+num2=int(input("enter your b"))
+
+lcm=find_lcm(num1,num2)
+print(f"lcm of {num1} and {num2} is {lcm}"
+
+Q Write a Python Program to Find HCF?
+Ans:-
+Here we have written function to find lcf or given two numbers to function.
+
+def find_hcf(a,b):
+    while b!=0:
+        a,b=b,a%b
+    return a
+num1=int(input("enter your number a"))
+num2=int(input("enter your number b"))
+hcf=find_hcf(num1,num2)
+print(f"hcf of {num1} and {num2} is {hcf}")
+
+Q Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal?
+Ans:-
+Here we have written few lines of code to change the type of given decimal data type.
+decimal=int(input("enter your decimal number"))
+
+binary=bin(decimal)
+octal=oct(decimal)
+hexadecimal=hex(decimal)
+
+print("Binary :",binary)
+print("octal :",octal)
+print("Hexadecimal :",hexadecimal)
+
+Q. Write a Python Program To Find ASCII value of a character?
+Ans:-
+Here we have written a code to find the ASCII value of any number as below .
+charector=input("enter your charector")
+ascii_values=ord(charector)
+print(f"ascii values of {charector} will be {ascii_values}")
+
+Q . Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
+Ans:-
+Here we have written code to calculate the four function of any numbers by choosing the desired opration wish to conduct on the given numbers.
+def add(x,y):
+    return x+y
+def minus(x,y):
+    return x-y
+def multiply(x,y):
+    return x*y
+def devide(x,y):
+    return x/y
+print("simple calculator")
+print("1. addition")
+print("2. minus")
+print("3. multiply")
+print("4. devide")
+
+choice=input("Enter your choice (1-4)")
+
+if choice in ['1','2','3','4']:
+    num1=float(input("given you num1"))
+    num2=float(input("give your num2"))
+    
+    if choice == '1':
+        result=add(num1,num2)
+        opration = '+'
+    elif choice == '2':
+        result=minus(num1,num2)
+        opration='-'
+    elif choice == '3':
+        result=multiply(num1,num2)
+        opration='*'
+    else:
+        result=devide(num1,num2)
+        opration='/'
+    print(num1,opration,num2,'=',result)
+else:
+    print("entered input is invalid kindly choose between 1 to 4")
